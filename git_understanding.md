@@ -61,3 +61,17 @@
 ### What happens if two people edit the same file on different branches?
 
 - They effectively work on two separate versions of the file so long as the branches do not interact. Conflicts only become a factor once a side branch tries to merge with the head, or if the side branch pulls updates from the main branch.
+
+## 3.6
+
+### What is the difference between staging and committing?
+
+* Staging selects which files will be included as part of the next commit, whereas committing records and snapshots local repository changes to be included in the next push.
+
+### Why does Git separate these two steps?
+
+- Commits can be done without including any untracked or temporary files in the directory that are not intentionally part of the repository. Staging can also be done progressively, until the files and changes that will be included in any given commit are decided.
+
+### When would you want to stage changes without committing?
+
+- To tracking new files that were not originally part of the repository.
