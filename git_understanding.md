@@ -47,3 +47,17 @@
 ### What surprised you while testing these commands?
 
 - git cherry pick can handle conflicts in a similar manner to pull requests.
+
+## 3.5
+
+### Why is pushing directly to main problematic?
+
+* It overwrites any changes, including those made by other contributors, without any review process. This can be inconvienent to search back for if multiple commits are made on top of an unauthorised or buggy commit.
+
+### How do branches help with reviewing code?
+
+-  They gate changes behind pull requests. In doing so, changes and any possible conflicts they may present must be reviewed before merges are made final. This allows changes to be denied preemptively or refined if they would introduce a bug or unauthorised edits.
+
+### What happens if two people edit the same file on different branches?
+
+- They effectively work on two separate versions of the file so long as the branches do not interact. Conflicts only become a factor once a side branch tries to merge with the head, or if the side branch pulls updates from the main branch.
