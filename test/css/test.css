@@ -1,0 +1,195 @@
+/* Css with Bootstrap 5 */
+
+:root {
+  --lab-bg: #f4f6f9;
+  --lab-surface: #ffffff;
+  --lab-border: #dee2e6;
+  --lab-accent: #green;
+  --lab-accent-soft: rgba(13, 110, 253, 0.08);
+  --lab-text: #212529;
+  --lab-muted: #6c757d;
+  --lab-radius: 0.5rem;
+  --lab-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.06);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--lab-text);
+  background: var(--lab-bg);
+}
+
+/* Page title (outside #app) */
+body > h1 {
+  margin: 0;
+  padding: 1.25rem 1rem 0.75rem;
+  font-size: clamp(1.5rem, 4vw, 1.75rem);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  text-align: center;
+  color: var(--lab-text);
+  border-bottom: 3px solid var(--lab-accent);
+  background: var(--lab-surface);
+  box-shadow: var(--lab-shadow);
+}
+
+#app.container {
+  padding-top: 1.5rem;
+  padding-bottom: 2.5rem;
+  max-width: 960px;
+}
+
+/* Form rows: labels + inputs */
+#app label {
+  display: block;
+  margin-top: 0.75rem;
+  margin-bottom: 0.25rem;
+  font-weight: 500;
+  font-size: 0.9rem;
+  color: var(--lab-muted);
+}
+
+#app label:first-of-type,
+#app .col-8 label:first-of-type {
+  margin-top: 0;
+}
+
+#app input[type="text"],
+#app select {
+  width: 100%;
+  max-width: 100%;
+  padding: 0.5rem 0.65rem;
+  border: 1px solid var(--lab-border);
+  border-radius: var(--lab-radius);
+  background: var(--lab-surface);
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+#app input[type="text"]:focus,
+#app select:focus {
+  outline: none;
+  border-color: var(--lab-accent);
+  box-shadow: 0 0 0 3px var(--lab-accent-soft);
+}
+
+#app input[type="radio"] {
+  margin-right: 0.35rem;
+  vertical-align: middle;
+}
+
+#app input[type="radio"] + label {
+  display: inline;
+  margin-top: 0;
+  margin-left: 0;
+  font-weight: 400;
+  color: var(--lab-text);
+}
+
+#app .col-4 strong {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+  color: var(--lab-text);
+}
+
+/* Section separation */
+#app hr {
+  margin: 1.75rem 0;
+  border: 0;
+  border-top: 1px solid var(--lab-border);
+  opacity: 1;
+}
+
+#app h1 {
+  font-size: 1.35rem;
+  font-weight: 600;
+  margin: 0 0 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--lab-accent-soft);
+}
+
+#app h2 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0 0 0.75rem;
+  color: var(--lab-text);
+}
+
+/* Table area */
+#app .table-responsive {
+  border-radius: var(--lab-radius);
+  overflow: hidden;
+  box-shadow: var(--lab-shadow);
+  border: 1px solid var(--lab-border);
+  background: var(--lab-surface);
+}
+
+#app .table {
+  margin-bottom: 0;
+}
+
+#app .table thead th,
+#app .table tbody td {
+  vertical-align: middle;
+}
+
+#app .table thead th {
+  background: var(--lab-accent);
+  color: #fff;
+  font-weight: 600;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  border: none;
+  padding: 0.65rem 0.75rem;
+}
+
+#app .table-striped > tbody > tr:nth-of-type(odd) > * {
+  --bs-table-bg-type: rgba(0, 0, 0, 0.02);
+}
+
+/* Registration + summary section */
+#app .row + br + h2,
+#app h2:last-of-type {
+  margin-top: 0.5rem;
+}
+
+#app h2:last-of-type + li {
+  list-style: none;
+  margin: 0 0 1rem;
+  padding: 0;
+}
+
+#app h2:last-of-type + li > ul {
+  margin: 0 0 0.5rem;
+  padding: 0.65rem 1rem;
+  list-style: none;
+  border: 1px solid var(--lab-border);
+  border-radius: var(--lab-radius);
+  background: var(--lab-surface);
+  box-shadow: var(--lab-shadow);
+}
+
+#app h2:last-of-type + li > ul:last-child {
+  margin-bottom: 0;
+}
+
+/* Footer */
+footer {
+  margin-top: auto;
+  padding: 1rem;
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--lab-muted);
+  border-top: 1px solid var(--lab-border);
+  background: var(--lab-surface);
+}
